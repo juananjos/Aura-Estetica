@@ -1,46 +1,329 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ===== FONTE GOOGLE ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+/* ===== RESET E BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff0f5;
+  color: #333;
+  line-height: 1.6;
 }
 
+/* ===== HEADER / NAVBAR ===== */
 header {
-    padding: 2rem 2rem;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  padding: 1.5rem 2rem;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-}
-
-.nav-links li a {
-    text-decoration: none;
-    font-size: 1rem;
-    color: #c2185b;
-    font-weight: 500;
-
-}
-
-.nav-links a:hover {
-      color: #c2185b;
-      background-color: #c5658b;
-}
 .logo {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #c2185b; /* rosa escuro */
+  color: #c2185b;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #c2185b;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links li a:hover {
+  background-color: #c5658b;
+  color: #fff;
+}
+
+/* ===== SEÇÃO GENÉRICA ===== */
+.section {
+  padding: 5rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2rem;
+  color: #c2185b;
+  margin-bottom: 1rem;
+}
+
+.section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.section ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* ===== SOBRE ===== */
+#sobre {
+  background-color: #fff0f5;
+}
+
+.sobre-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.sobre-texto {
+  flex: 1 1 500px;
+  min-width: 300px;
+}
+
+.sobre-texto h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #c2185b;
+}
+
+.sobre-texto p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.sobre-imagem {
+  flex: 1 1 400px;
+  min-width: 280px;
+  text-align: center;
+}
+
+.sobre-imagem img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== MISSÃO / VISÃO / VALORES ===== */
+.icon-mvv {
+  font-size: 2rem;
+  color: #c2185b;
+  margin-bottom: 0.8rem;
+}
+
+.mvv-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 3rem;
+  justify-content: center;
+}
+
+.mvv-box {
+  flex: 1 1 280px;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.mvv-box:hover {
+  transform: translateY(-5px);
+}
+
+.mvv-box h3 {
+  font-size: 1.3rem;
+  color: #c2185b;
+  margin-bottom: 1rem;
+}
+
+.mvv-box p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ===== SERVIÇOS ===== */
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  margin-top: 2rem;
+}
+
+.servico-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.servico-item img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #f8bbd0;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.servico-item p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #c2185b;
+}
+
+.servico-item:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== FORMULÁRIO AGENDAR ===== */
+.form-agendar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  max-width: 360px;
+  margin: 2rem auto 0;
+  background-color: #fff;
+  padding: 1.5rem 1.8rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(194, 33, 91, 0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+.form-agendar input,
+.form-agendar select,
+.form-agendar textarea {
+  padding: 0.65rem 1rem;
+  border: 1.8px solid #f4c2d7;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease;
+  outline: none;
+  color: #444;
+  font-family: 'Poppins', sans-serif;
+}
+
+.form-agendar input::placeholder,
+.form-agendar select::placeholder,
+.form-agendar textarea::placeholder {
+  color: #d48aa0;
+  font-weight: 400;
+}
+
+.form-agendar input:focus,
+.form-agendar select:focus,
+.form-agendar textarea:focus {
+  border-color: #c2185b;
+  box-shadow: 0 0 6px rgba(194, 33, 91, 0.25);
+}
+
+.form-agendar textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form-agendar button {
+  background: linear-gradient(135deg, #c2185b, #a0144b);
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 0;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 10px rgba(194, 33, 91, 0.25);
+}
+
+.form-agendar button:hover {
+  background: linear-gradient(135deg, #a0144b, #7f0f3a);
+  box-shadow: 0 6px 16px rgba(160, 9, 51, 0.5);
+}
+
+/* ===== BOTÃO WHATSAPP CONTATO ===== */
+.btn-contato {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.4rem 1.2rem;
+  background: linear-gradient(135deg, #c2185b, #a0144b);
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 3px 8px rgba(194, 33, 91, 0.2);
+}
+
+.btn-contato:hover {
+  background: linear-gradient(135deg, #a0144b, #7f0f3a);
+  transform: translateY(-2px);
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  .sobre-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sobre-texto, .sobre-imagem {
+    flex: 1 1 100%;
+  }
+
+  .sobre-texto h2 {
+    font-size: 1.6rem;
+  }
+
+  .sobre-texto p {
+    font-size: 0.95rem;
+  }
+
+  .mvv-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mvv-box {
+    width: 100%;
+    max-width: 400px;
+  }
 }

@@ -1,23 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Aura Estética</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aura Estética</title>
+
+  <!-- Fontes Google e CSS externo -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome para ícones (se quiser usar ícones de verdade depois) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-            <nav class="navbar">
-                <div class="logo">LiveBeauty</div>
-                <ul class="nav-links">
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Serviços</a></li>
-                    <li><a href="#">Agendar</a></li>
-                    <li><a href="#">Contato</a></li>
-                </ul>
-            </nav>
 
-    </header>
+  <!-- ========== HEADER / NAVBAR ========== -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Aura Estética</div>
+      <ul class="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#agendar">Agendar</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== SOBRE ========== -->
+    <section id="sobre" class="section fade-in">
+      <div class="sobre-container">
+        <div class="sobre-texto">
+          <h2>Sobre</h2>
+          <p>
+            Fundada em 2025, a <strong>Aura Estética</strong> nasceu com o propósito de transformar o cuidado com a beleza em uma experiência única, acolhedora e transformadora. Nosso espaço foi criado para valorizar o bem‑estar físico, emocional e estético, com técnicas modernas e um toque humano especial.
+          </p>
+          <p>
+            Acreditamos que cada pessoa carrega uma beleza autêntica. Por isso, unimos profissionalismo, carinho e excelência em cada atendimento, para que você se sinta cuidada, confiante e ainda mais linda.
+          </p>
+        </div>
+
+        <div class="sobre-imagem">
+          <img src="imagens/img-sobre.jpg" alt="Foto de mulher com máscara facial">
+        </div>
+      </div>
+
+      <!-- Missão • Visão • Valores -->
+      <div class="mvv-container">
+        <div class="mvv-box">
+          <h3>Missão</h3>
+          <p>Proporcionar experiências únicas em estética e bem‑estar, elevando a autoestima de cada cliente por meio de cuidados personalizados, excelência no atendimento e amor pelo que fazemos.</p>
+        </div>
+        <div class="mvv-box">
+          <h3>Visão</h3>
+          <p>Ser referência em estética humanizada na região, reconhecida pela qualidade dos nossos serviços, inovação nos tratamentos e compromisso com o cuidado individualizado.</p>
+        </div>
+        <div class="mvv-box">
+          <h3>Valores</h3>
+          <p>Respeito, empatia, ética, inovação, qualidade, acolhimento e valorização da beleza natural de cada pessoa.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SERVIÇOS ========== -->
+    <section id="servicos" class="section fade-in">
+      <h2>Serviços</h2>
+      <div class="servicos-grid">
+        <div class="servico-item">
+          <img src="imagens/limpeza-de-pele.png" alt="Limpeza de pele">
+          <p>Limpeza de Pele</p>
+        </div>
+        <div class="servico-item">
+          <img src="imagens/designer-sobrancelha.jpg" alt="Design de sobrancelha">
+          <p>Design de Sobrancelha</p>
+        </div>
+        <div class="servico-item">
+          <img src="imagens/massagem-corporal.png" alt="Massagem relaxante">
+          <p>Massagem Relaxante</p>
+        </div>
+        <div class="servico-item">
+          <img src="imagens/depilação-laser.png" alt="Depilação a laser">
+          <p>Depilação a Laser</p>
+        </div>
+        <div class="servico-item">
+          <img src="imagens/micropgmentação-labial.png" alt="Micropigmentação labial">
+          <p>Micropigmentação Labial</p>
+        </div>
+        <div class="servico-item">
+          <img src="imagens/drenagem-linfática.png" alt="Drenagem linfática">
+          <p>Drenagem Linfática</p>
+        </div>
+        <div class="servico-item">
+          <img src="imagens/redução-de-medidas.jpg" alt="Redução de medidas">
+          <p>Redução de Medidas</p>
+        </div>
+        <div class="servico-item">
+          <img src="imagens/tratamentos-para-celulites.jpg" alt="Tratamentos para celulites">
+          <p>Tratamentos para Celulites</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== AGENDAR ========== -->
+    <section id="agendar" class="section">
+      <h2>Agendar</h2>
+      <p>Preencha o formulário para solicitar seu atendimento. Entraremos em contato para confirmar horário e detalhes.💖</p>
+
+      <form class="form-agendar">
+        <input type="text"  name="nome"     placeholder="Seu nome completo"  required>
+        <input type="email" name="email"    placeholder="Seu e‑mail"         required>
+        <input type="tel"   name="telefone" placeholder="Seu WhatsApp"       required>
+        <input type="date"  name="data"     required>
+
+        <select name="servico" required>
+          <option value="">Selecione um serviço</option>
+          <option>Limpeza de Pele</option>
+          <option>Design de Sobrancelha</option>
+          <option>Massagem Relaxante</option>
+          <option>Depilação a Laser</option>
+          <option>Micropigmentação Labial</option>
+          <option>Drenagem Linfática</option>
+          <option>Redução de Medidas</option>
+          <option>Tratamentos para Celulites</option>
+        </select>
+
+        <textarea name="mensagem" rows="4" placeholder="Informações adicionais (opcional)"></textarea>
+        <button type="submit">Enviar pedido de agendamento</button>
+      </form>
+    </section>
+
+    <!-- ========== CONTATO ========== -->
+    <section id="contato" class="section">
+      <h2>Contato</h2>
+
+      <p>📧 <strong>Email:</strong> contato@auraestetica.com</p>
+      <p>📱 <strong>WhatsApp:</strong> (11) 99999‑9999</p>
+      <p>🕒 <strong>Horário de Atendimento:</strong><br>
+         Segunda a Sexta: 9h às 18h<br>
+         Sábados: 9h às 14h
+      </p>
+      <p>📍 <strong>Endereço:</strong> Rua das Rosas, 123 — Jardim Bela Vista, São Paulo ‑ SP</p>
+
+     <a href="https://wa.me/5511999999999" target="_blank" class="btn-contato">
+  <i class="fab fa-whatsapp"></i> Fale no WhatsApp
+</a>
+
+    </section>
+
+  </main>
 </body>
 </html>
